@@ -1,3 +1,20 @@
-frontend/.env
+# Env files
+.env
 backend/.env
-backend/requirements.txt
+frontend/.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
