@@ -1,25 +1,15 @@
 services:
-  db:
-    image: postgres:15
-    container_name: hrms_db
-    restart: always
-    env_file:
-      - ./backend/.env
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5433:5432"
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: hrms_backend
-    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
+    command: sh -c "gunicorn backend.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - ./backend:/app
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     depends_on:
       - db
 
@@ -29,7 +19,7 @@ services:
       dockerfile: Dockerfile
     container_name: hrms_frontend
     ports:
-      - "3000:80"
+      - "${PORT}:80"
     depends_on:
       - backend
 

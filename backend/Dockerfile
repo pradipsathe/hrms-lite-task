@@ -36,4 +36,4 @@ EXPOSE 8000
 
 RUN python manage.py collectstatic --noinput
 # Run Gunicorn
-CMD ["sh", "-c", "gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT"]
+CMD sh -c "gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT"
