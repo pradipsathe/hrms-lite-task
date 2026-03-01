@@ -130,8 +130,10 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # For development with React frontend
-CORS_ALLOW_ALL_ORIGINS = [
-    "https://hrms-lite-task-tsvd.vercel.app/",
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://hrms-lite-task-tsvd.vercel.app",
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
