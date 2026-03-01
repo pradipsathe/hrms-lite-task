@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     "hrms-web-service-production.up.railway.app"
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
