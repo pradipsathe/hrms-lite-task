@@ -137,4 +137,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://hrms-lite-task-tsvd.vercel.app",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://hrms-lite-task-tsvd.vercel.app",
+]
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
