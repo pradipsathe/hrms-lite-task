@@ -134,11 +134,11 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://hrms-lite-task-tsvd.vercel.app",
+    "https://hrms-web-service.vercel.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://hrms-lite-task-tsvd.vercel.app",
+    "https://hrms-web-service.vercel.app",
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
